@@ -1,0 +1,14 @@
+"0","#read in database
+source(""0_R/0_check_load_input_data.R"")
+"
+"2","[38;5;252m[36mℹ[38;5;252m SHA-1 hash of file is ""4518badd6f6d47a74285bded3b04ae8ed892b6ff""[39m"
+"2","[38;5;252mThe [34mgoogledrive[38;5;252m package is requesting access to your Google account.
+Enter '1' to start a new auth process or select a pre-authorized account.
+[1m1[22m: Send me to the browser for a new auth process.
+[1m2[22m: r.tobiaskoch@gmail.com[39m"
+"0","2"
+"0","#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+"1","Please input a valid response."
+"0","#--------------------------L O A D  P A C K A G E S ----------------------------------"
+"0","#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+"0","rm(list = ls())"

@@ -1,0 +1,9 @@
+"0","Rscript 0_R/config_YTD_report.R 2024 37 # first arg is year second is week"
+"1","[1] ""0_R/gsheet_pull_prompt.R file successfully loaded from github""
+[1] ""All required directories exist.""
+"
+"2","ℹ SHA-1 hash of file is ""4518badd6f6d47a74285bded3b04ae8ed892b6ff""
+Error: The following directories are empty or don't exist: 1_input 
+Please populate them with the required files manually or with 0_check_load_input_data.R script.
+Execution halted
+"

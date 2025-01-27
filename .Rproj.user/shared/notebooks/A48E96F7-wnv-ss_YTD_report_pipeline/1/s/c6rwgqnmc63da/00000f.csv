@@ -1,0 +1,49 @@
+"0","source(""0_R/abundance_v3.R"")"
+"1","2_mid"
+"1"," "
+"1"," exists and will be used for output files."
+"1","[1]"
+"1"," ""using config file for filenames and parameters..."""
+"1","
+"
+"1","data_input file "
+"1"," "
+"1","1_input/wnv-s_database - data.csv"
+"1"," "
+"1"," loaded successfully.
+"
+"1"," "
+"1","contains "
+"1"," "
+"1","22422"
+"1"," "
+"1"," rows & "
+"1"," "
+"1","17"
+"1"," "
+"1","columns. 
+"
+"1","Checking trap L NE not equal to 10 before 2024...
+"
+"1","All traps equal to 10. 
+
+"
+"1","Checking trap_L NW not equal to 9 before 2024...
+"
+"1","All traps equal to 9. 
+
+"
+"1","Checking  trap_L SE L not equal to 15 before 2024...
+"
+"1","All traps equal to 15. 
+
+"
+"1","Checking  trap_L SW not equal to 9 before 2024.
+"
+"1","All traps equal to 9. 
+
+"
+"1","2_mid/abundance.csv"
+"1"," "
+"1"," file saved successfully 
+"

@@ -1,0 +1,8 @@
+"0","#read in database"
+"0","source(""0_R/0_check_load_input_data.R"")"
+"2","[38;5;252m[36mℹ[38;5;252m SHA-1 hash of file is ""59d0ba7b98cc91ec07d242fdbde06d8b693a9bc6""[39m"
+"1","[1]"
+"1"," ""0_R/gsheet_pull_prompt.R file successfully loaded from github"""
+"1","
+"
+"1","Please input a valid response."

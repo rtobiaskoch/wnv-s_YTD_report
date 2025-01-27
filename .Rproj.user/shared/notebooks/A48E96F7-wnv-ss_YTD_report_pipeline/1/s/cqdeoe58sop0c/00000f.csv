@@ -1,0 +1,33 @@
+"0","source('0_R/pools_v3.R')"
+"1","2_mid"
+"1"," "
+"1"," exists and will be used for output files."
+"1","[1]"
+"1"," ""using config file for filenames and parameters..."""
+"1","
+"
+"1","data_input file "
+"1"," "
+"1","1_input/wnv-s_database - data.csv"
+"1"," "
+"1"," loaded successfully.
+"
+"1"," "
+"1","contains "
+"1"," "
+"1","22422"
+"1"," "
+"1"," rows & "
+"1"," "
+"1","17"
+"1"," "
+"1","columns. 
+"
+"1","All Pools n > 0 have test_code. Nice. 
+
+"
+"2","`summarise()` has grouped output by 'year', 'week', 'spp'. You can override using the `.groups` argument."
+"1","2_mid/pools.csv"
+"1"," "
+"1"," file saved successfully 
+"

@@ -1,0 +1,16 @@
+{
+    "dialog-state": {
+        "query": "mozzy_pal2",
+        "path": "/Users/user/Programming Directory/Ebel Lab/wnv-ss_YTD_Report",
+        "regex": false,
+        "caseSensitive": false,
+        "wholeWord": false,
+        "filePatterns": [],
+        "useGitGrep": false,
+        "excludeGitIgnore": true,
+        "excludeFilePatterns": [],
+        "resultsCount": 4,
+        "errorCount": 0,
+        "replaceErrors": ""
+    }
+}

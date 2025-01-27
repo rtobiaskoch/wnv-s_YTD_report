@@ -1,0 +1,245 @@
+[1] "1_input/config_params.RDS Log"
+$all_zones
+[1] "NE" "SE" "NW" "SW" "LV" "BC" "BE"
+
+$args
+$args$week
+[1] 37
+
+$args$year
+[1] 2024
+
+
+$col_class_database
+     csu_id     trap_id        year        week   trap_date      county 
+"character" "character"   "numeric"   "numeric" "character" "character" 
+     method       genus         spp         sex   no_gravid  no_deplete 
+"character" "character" "character"   "logical"   "numeric"   "numeric" 
+      total   test_code         seq          cq        zone         lat 
+  "numeric"   "numeric"   "numeric"   "numeric" "character"   "numeric" 
+       long 
+  "numeric" 
+
+$col_database
+ [1] "csu_id"     "trap_id"    "zone"       "year"       "week"      
+ [6] "trap_date"  "county"     "method"     "spp"        "total"     
+[11] "test_code"  "cq"         "copies_WNV" "seq"        "cq"        
+[16] "lat"        "long"      
+
+$col_input_database
+ [1] "csu_id"    "trap_id"   "year"      "week"      "trap_date" "county"   
+ [7] "method"    "spp"       "total"     "test_code" "zone"     
+
+$col_trap
+[1] "zone" "lat"  "long"
+
+$color_palette
+
+$config_params_file
+[1] "1_input/config_params.RDS"
+
+$copy_threshold
+[1] 500
+
+$curr_hx_pal
+  current        hx 
+"#e9724c"  "grey50" 
+
+$dir_input
+[1] "1_input"
+
+$dir_mid
+[1] "2_mid"
+
+$dir_name
+[1] "scripts"
+
+$dir_output
+[1] "3_output"
+
+$dir_path
+[1] "0_R"
+
+$dir_scripts
+[1] "0_R"
+
+$directories
+$directories$input
+[1] "1_input"
+
+$directories$scripts
+[1] "0_R"
+
+$directories$mid
+[1] "2_mid"
+
+$directories$output
+[1] "3_output"
+
+
+$empty_dirs
+NULL
+
+$fc_zones
+[1] "NE" "SE" "NW" "SW"
+
+$fn_abund_mid
+[1] "2_mid/abundance.csv"
+
+$fn_data_output
+[1] "3_output/data_zone_wk_stats.csv"
+
+$fn_database_input
+[1] "1_input/wnv-s_database - data.csv"
+
+$fn_gdrive_archive
+[1] "wnv-s_database_pre_y2024_w37.gsheet"
+
+$fn_gdrive_database
+[1] "1_input/wnv-s_database - data.csv"
+
+$fn_gsheet_pull
+[1] "0_R/gsheet_pull_prompt.R"
+
+$fn_pools_mid
+[1] "2_mid/pools.csv"
+
+$fn_trap_p_wk
+[1] "2_mid/trap_p_wk.csv"
+
+$fun_gsheet_pull_prompt
+function (filename, sheet, key) 
+{
+    if (!drive_has_token()) {
+        googledrive::drive_auth()
+    }
+    user_input <- readline(prompt = paste0("Would you like to download/update the file ", 
+        filename, " from Google Drive? (yes/no): "))
+    if (tolower(user_input) == "yes") {
+        require(googlesheets4)
+        require(googledrive)
+        if (file.exists(filename)) {
+            file.remove(filename)
+        }
+        mdata = read_sheet(key, sheet = sheet)
+        mdata <- mdata %>% mutate(across(where(is.list), ~sapply(., 
+            paste, collapse = ", ")))
+        write.csv(mdata, filename, row.names = F, na = "")
+        head(read.csv(filename))
+        print("...Checking that gdrive download worked...")
+        if (file.exists(filename)) {
+            cat(filename, " gdrive downloaded successfully.\n")
+        }
+        else {
+            stop(cat(filename, " file doesn't exist. Please rerun function or download manually. \n"))
+        }
+    }
+    if (tolower(user_input) == "no") {
+        cat("File", filename, " gdrive download skipped. \n")
+        if (file.exists(filename)) {
+            cat(paste0(filename, " modified ", as.Date.POSIXct(file.info(filename)$mtime), 
+                " will be used."))
+        }
+        else {
+            cat(filename, " file doesn't exist. Please rerun function or download manually. \n")
+            stop()
+        }
+    }
+    if (!(tolower(user_input) %in% c("no", "yes"))) {
+        cat("Please input a valid response.")
+    }
+    rm(user_input)
+}
+
+$grp_vars
+[1] "year" "week" "zone" "spp" 
+
+$hx_grp_vars
+[1] "week" "zone"
+
+$input_subdirs
+$input_subdirs$database
+[1] "1_input"
+
+$input_subdirs$scripts
+[1] "0_R"
+
+
+$key_database_gsheet
+[1] "12Mf-w9I9NHTTDjzEPRoxUE08ka4WZ6RE-RM1s-FW7qA"
+
+$missing_dirs
+NULL
+
+$non_fc_zones
+[1] "LV" "BC" "BE"
+
+$non_routine_zones
+[1] "BC"
+
+$pal_mozzy
+     hx_Tarsalis       hx_Pipiens current_Tarsalis  current_Pipiens 
+        "grey50"         "grey30"        "#e9724c"        "#820263" 
+
+$pal_mozzy2
+  Pipiens  Tarsalis       All 
+"#820263" "#e9724c" "#faa916" 
+
+$pal_mozzy3
+[1] "#ffc857" "#e9724c" "#c5283d"
+
+$parser
+<Parser>
+  Public:
+    add_argument: function (...) 
+    add_argument_group: function (...) 
+    add_mutually_exclusive_group: function (required = FALSE) 
+    add_subparsers: function (...) 
+    clone: function (deep = FALSE) 
+    format_help: function () 
+    format_usage: function () 
+    get_default: function (...) 
+    initialize: function (python_code, name) 
+    parse_args: function (args = commandArgs(TRUE)) 
+    parse_intermixed_args: function (args = commandArgs(TRUE)) 
+    parse_known_args: function (args = commandArgs(TRUE)) 
+    parse_known_intermixed_args: function (args = commandArgs(TRUE)) 
+    print_help: function () 
+    print_usage: function () 
+    set_defaults: function (...) 
+  Private:
+    n_groups: 0
+    n_mutually_exclusive_groups: 0
+    name: parser
+    python_code: Code, R6
+
+$rn_threshold
+[1] 34000
+
+$vi_threshold
+[1] 0.75
+
+$week_filter
+[1] 37
+
+$week_filter_hx
+ [1] 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37
+
+$week_filter_yr
+ [1] 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37
+
+$week_hardcode
+[1] 37
+
+$year_filter
+[1] 2024
+
+$year_filter_hx
+ [1] 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023
+
+$year_hardcode
+[1] 2024
+
+$zone_lvls
+[1] "NW" "NE" "SE" "SW" "FC" "LV" "BE" "BC"
+

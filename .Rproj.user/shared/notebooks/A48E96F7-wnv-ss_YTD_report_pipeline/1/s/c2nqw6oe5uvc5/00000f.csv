@@ -1,0 +1,88 @@
+"0","source(""0_R/abundance_v3.R"")"
+"1","2_mid"
+"1"," "
+"1"," exists and will be used for output files."
+"1","[1]"
+"1"," ""using config file for filenames and parameters..."""
+"1","
+"
+"1","data_input file "
+"1"," "
+"1","1_input/wnv-s_database - data.csv"
+"1"," "
+"1"," loaded successfully.
+
+"
+"1","Checking trap L NE not equal to 10 before 2024...
+"
+"1","All traps equal to 10. 
+
+"
+"1","Checking trap_L NW not equal to 9 before 2024...
+"
+"1","All traps equal to 9. 
+
+"
+"1","Checking  trap_L SE L not equal to 15 before 2024...
+"
+"1","All traps equal to 15. 
+
+"
+"1","Checking  trap_L SW not equal to 9 before 2024.
+"
+"1","All traps equal to 9. 
+
+"
+"1","2_mid/y2024_w37_abundance.csv"
+"1"," "
+"1"," file saved successfully 
+"
+"1"," "
+"1","Processed "
+"1"," "
+"1","13493"
+"1"," "
+"1"," traps "
+"1"," "
+"1"," with "
+"1"," "
+"1","588116"
+"1"," "
+"1","mosquitoes 
+"
+"1"," "
+"1","in zones "
+"1"," "
+"1","FC"
+"1"," "
+"1","LV"
+"1"," "
+"1","NE"
+"1"," "
+"1","NW"
+"1"," "
+"1","SE"
+"1"," "
+"1","SW"
+"1"," "
+"1","BE"
+"1"," "
+"1","BC"
+"1"," "
+"1","
+"
+"1"," "
+"1"," with an avg abundance of "
+"1"," "
+"1","43.58675"
+"1"," "
+"1"," from "
+"1"," "
+"1","2014"
+"1"," "
+"1"," to "
+"1"," "
+"1","2024"
+"1"," "
+"1","
+"

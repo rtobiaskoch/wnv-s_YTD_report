@@ -1,0 +1,16 @@
+"0","gsheet_pull(key = database_gsheet_key, 
+            sheet = ""data"", 
+            out_fn = fn_database_input,
+            update = T)
+"
+"2","[38;5;255mThe [34mgooglesheets4[38;5;255m package is requesting access to your Google account.
+Enter '1' to start a new auth process or select a pre-authorized account.
+[1m1[22m: Send me to the browser for a new auth process.
+[1m2[22m: r.tobiaskoch@gmail.com[39m"
+"0","2"
+"2","Auto-refreshing stale OAuth token.
+"
+"2","[32m✔[39m Reading from [36mwnv-s_database[39m.
+"
+"2","[32m✔[39m Range '[33m'data'[39m'.
+"
